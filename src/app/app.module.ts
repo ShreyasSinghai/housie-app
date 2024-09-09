@@ -11,6 +11,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
+// Define the routes array
+const routes: Routes = [
+  { path: '', component: AppComponent }, // Default route
+];
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
   providers: [],
   bootstrap: [AppComponent],
